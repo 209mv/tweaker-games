@@ -1,69 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tweaker Games</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="ruffle.js"></script> <!-- For SWF games -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tweaker Games</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<video autoplay muted loop id="bg-video">
+  <source src="videos/galaxy.mp4" type="video/mp4">
+</video>
 
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#games">Games</a></li>
-      <li><a href="#feedback">Feedback</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="chat.html">Chat</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+</nav>
 
-  <!-- Galaxy Video Background -->
-  <video autoplay muted loop id="bg-video">
-    <source src="assets/galaxy.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<header id="home">
+  <h1>Welcome to Tweaker Games</h1>
+  <div id="announcement">
+    <p>🎮 New games coming soon!</p>
+  </div>
 
-  <!-- Hero Section -->
-  <section id="home">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Tweaker Games</h1>
-      <p>uh yeah games</p>
-    </div>
-  </section>
+  <div id="login-panel">
+    <h2>Login / Register</h2>
+    <input type="text" placeholder="Username" id="username">
+    <input type="password" placeholder="Password" id="password">
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+  </div>
+</header>
 
-  <!-- Games Section -->
-  <section id="games">
-    <div class="overlay"></div>
-    <h2>Games</h2>
-    <div class="game-grid">
-      <div class="game-card">
-        <h3>Game 1</h3>
-        <iframe src="games/game1.html"></iframe>
-      </div>
-      <div class="game-card">
-        <h3>Game 2</h3>
-        <iframe src="games/game2.html"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feedback Section -->
-  <section id="feedback">
-    <div class="overlay"></div>
-    <h2>Send us your ideas</h2>
-    <form>
-      <input type="text" placeholder="Your username" required>
-      <textarea placeholder="Your feedback" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Tweaker Games</p>
-  </footer>
-
+<script src="scripts.js"></script>
 </body>
 </html>
