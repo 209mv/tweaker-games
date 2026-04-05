@@ -1,165 +1,107 @@
-/* Global Reset */
-* {
+/* General */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-body, html {
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   color: white;
-  scroll-behavior: smooth;
-  position: relative;
-  overflow-x: hidden;
+  background: black;
 }
 
-/* Navbar */
-nav {
+video#bg-video {
   position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(5px);
-  padding: 10px 0;
-}
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-nav ul li {
-  margin: 0 25px;
-}
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-nav ul li a:hover {
-  color: #00ffff;
-}
-
-/* Galaxy Video Background */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
-  z-index: -10;
+  z-index: -1;
 }
 
-/* Overlay to darken video for readability */
-section .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: -5;
-}
-
-/* Hero Section */
-#home {
-  height: 100vh;
+nav ul {
+  list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+  gap: 20px;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.5);
 }
-#home h1 {
-  font-size: 4rem;
+
+nav ul li a {
   color: #00ffff;
-  text-shadow:
-    0 0 5px #00ffff,
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 40px #00ffff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#home p {
-  font-size: 1.8rem;
-  color: white;
-  text-shadow:
-    0 0 3px #00ffff,
-    0 0 5px #00ffff,
-    0 0 10px #00ffff;
-}
-
-/* Sections */
-section {
-  padding: 80px 50px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Games Section */
-#games h2, #feedback h2 {
+h1 {
+  font-size: 4rem;
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
+
+/* Game Grid */
 .game-grid {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 30px;
+  padding: 20px;
 }
+
 .game-card {
+  width: 150px;
   background: rgba(255,255,255,0.1);
   border-radius: 12px;
-  padding: 15px;
-  width: 300px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
   transition: transform 0.3s, background 0.3s;
 }
 .game-card:hover {
   transform: translateY(-5px);
   background: rgba(255,255,255,0.2);
 }
-.game-card iframe {
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
-  border: none;
+.game-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
-/* Feedback Section */
-#feedback form {
+/* Game Page */
+.game-page {
   display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: auto;
+  flex-direction: row;
+  height: 100vh;
+  padding: 20px;
+  gap: 20px;
 }
-#feedback input, #feedback textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
+.game-container {
+  flex: 1;
 }
-#feedback button {
-  padding: 10px;
+iframe#game-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
   border: none;
-  border-radius: 6px;
+}
+.sidebar {
+  width: 200px;
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 10px;
+}
+.controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+.controls button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   background: #00ffff;
   color: black;
   font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-#feedback button:hover {
-  background: #00bbbb;
-}
-
-/* Footer */
-footer {
-  padding: 20px;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
 }
