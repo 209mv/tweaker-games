@@ -3,40 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tweaker games</title>
+<title>Tweaker Games</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Galaxy Background -->
+<!-- Background -->
 <video autoplay muted loop id="bg-video">
-  <source src="galaxy.mp4" type="video/mp4">
+  <source src="videos/galaxy.mp4" type="video/mp4">
 </video>
 
 <!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="games.html">Games</a></li>
-    <li><a href="feedback.html">Feedback</a></li>
-    <li><a href="chat.html">Chat</a></li>
-    <li><a href="admin.html">Admin</a></li>
-  </ul>
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="chat.html">Chat</a>
+  </div>
+  <div class="nav-right">
+    <button id="accountBtn">Account</button>
+  </div>
 </nav>
 
 <!-- Header -->
-<header id="home">
-  <h1>tweak tweak games</h1>
+<header>
+  <h1>Welcome to Tweaker Games</h1>
 </header>
 
-<!-- Account Panel -->
-<div class="panel account-panel">
-  <h2>Account</h2>
-  <input type="text" placeholder="Username" id="username" class="bubble-input">
-  <input type="password" placeholder="Password" id="password" class="bubble-input">
-  <div class="bubble-buttons">
-    <button onclick="login()">Login</button>
-    <button onclick="register()">Register</button>
+<!-- Account Modal -->
+<div id="accountModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Account</h2>
+    <input type="text" placeholder="Username" class="bubble-input">
+    <input type="password" placeholder="Password" class="bubble-input">
+    <div class="bubble-buttons">
+      <button>Login</button>
+      <button>Register</button>
+    </div>
   </div>
 </div>
 
