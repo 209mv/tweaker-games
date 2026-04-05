@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tweaker Games</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="ruffle.js"></script> <!-- Ruffle for SWF games -->
+  <script src="ruffle.js"></script> <!-- For SWF games -->
 </head>
 <body>
 
@@ -18,12 +18,15 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
+  <!-- Galaxy Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/galaxy.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Hero Section -->
   <section id="home">
-    <video autoplay muted loop id="bg-video">
-      <source src="assets/galaxy.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="overlay"></div>
     <div class="content">
       <h1>Welcome to Tweaker Games</h1>
       <p>Play HTML5 & SWF games online!</p>
@@ -32,24 +35,23 @@
 
   <!-- Games Section -->
   <section id="games">
+    <div class="overlay"></div>
     <h2>Games</h2>
     <div class="game-grid">
-      <!-- Example game card -->
       <div class="game-card">
         <h3>Game 1</h3>
         <iframe src="games/game1.html"></iframe>
       </div>
-
       <div class="game-card">
         <h3>Game 2</h3>
         <iframe src="games/game2.html"></iframe>
       </div>
-      <!-- Add more cards here -->
     </div>
   </section>
 
   <!-- Feedback Section -->
   <section id="feedback">
+    <div class="overlay"></div>
     <h2>Send us your ideas</h2>
     <form>
       <input type="text" placeholder="Your username" required>
@@ -63,6 +65,5 @@
     <p>&copy; 2026 Tweaker Games</p>
   </footer>
 
-  <script src="scripts.js"></script>
 </body>
 </html>
