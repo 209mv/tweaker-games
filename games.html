@@ -3,37 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Games - Tweaker Games</title>
+<title>Tweaker Games - Games</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <video autoplay muted loop id="bg-video">
   <source src="videos/galaxy.mp4" type="video/mp4">
 </video>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="games.html">Games</a></li>
-    <li><a href="feedback.html">Feedback</a></li>
-    <li><a href="chat.html">Chat</a></li>
-    <li><a href="admin.html">Admin</a></li>
-  </ul>
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="chat.html">Chat</a>
+  </div>
 </nav>
 
-<main>
+<header>
   <h1>Games</h1>
-  <div class="game-grid">
-    <div class="game-card" onclick="openGame('games/game1.html')">
-      <img src="games/icons/game1.png" alt="Game 1">
-      <h3>Game 1</h3>
-    </div>
-    <div class="game-card" onclick="openGame('games/game2.html')">
-      <img src="games/icons/game2.png" alt="Game 2">
-      <h3>Game 2</h3>
+</header>
+
+<div class="game-grid">
+  <!-- Example Game Card -->
+  <div class="game-card" onclick="openGame('game1.html')">
+    <img src="icons/game1.png" alt="Game 1">
+    <span>Game 1</span>
+  </div>
+  <div class="game-card" onclick="openGame('game2.html')">
+    <img src="icons/game2.png" alt="Game 2">
+    <span>Game 2</span>
+  </div>
+  <!-- Add more games here -->
+</div>
+
+<!-- Game overlay -->
+<div id="gameOverlay" class="game-overlay">
+  <div class="overlay-content">
+    <iframe id="gameFrame" src="" frameborder="0"></iframe>
+    <div class="game-sidebar">
+      <h3>Leaderboard</h3>
+      <ul id="leaderboard"></ul>
+      <button onclick="toggleFullscreen()">Full Screen</button>
+      <button onclick="closeGame()">Close</button>
     </div>
   </div>
-</main>
+</div>
 
 <script src="scripts.js"></script>
 </body>
