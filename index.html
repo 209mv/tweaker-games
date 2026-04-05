@@ -1,17 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tweaker Games</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="ruffle.js"></script> <!-- Ruffle for SWF games -->
 </head>
 <body>
 
-<h1>Tweaker Games</h1>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+  </nav>
 
-<input type="text" id="search" placeholder="Search games...">
+  <!-- Home Section -->
+  <section id="home">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/galaxy.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <h1>Welcome to Tweaker Games</h1>
+      <p>Play HTML5 & SWF games online!</p>
+    </div>
+  </section>
 
-<div id="games"></div>
+  <!-- Games Section -->
+  <section id="games">
+    <h2>Games</h2>
+    <div class="game-grid">
+      <!-- Example game card -->
+      <div class="game-card">
+        <h3>Game 1</h3>
+        <iframe src="games/game1.html"></iframe>
+      </div>
 
-<script src="script.js"></script>
+      <div class="game-card">
+        <h3>Game 2</h3>
+        <iframe src="games/game2.html"></iframe>
+      </div>
+      <!-- Add more cards here -->
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback">
+    <h2>Send us your ideas</h2>
+    <form>
+      <input type="text" placeholder="Your username" required>
+      <textarea placeholder="Your feedback" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Tweaker Games</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
