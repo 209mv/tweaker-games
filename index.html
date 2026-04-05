@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tweaker Games</title>
+<title>tweaker games</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Galaxy Background -->
 <video autoplay muted loop id="bg-video">
   <source src="galaxy.mp4" type="video/mp4">
 </video>
 
+<!-- Navigation -->
 <nav>
   <ul>
     <li><a href="index.html">Home</a></li>
@@ -21,20 +24,21 @@
   </ul>
 </nav>
 
+<!-- Header -->
 <header id="home">
-  <h1>Welcome to Tweaker Games</h1>
-  <div id="announcement">
-    <p>🎮 New games coming soon!</p>
-  </div>
+  <h1>tweak tweak games</h1>
+</header>
 
-  <div id="login-panel">
-    <h2>Login / Register</h2>
-    <input type="text" placeholder="Username" id="username">
-    <input type="password" placeholder="Password" id="password">
+<!-- Account Panel -->
+<div class="panel account-panel">
+  <h2>Account</h2>
+  <input type="text" placeholder="Username" id="username" class="bubble-input">
+  <input type="password" placeholder="Password" id="password" class="bubble-input">
+  <div class="bubble-buttons">
     <button onclick="login()">Login</button>
     <button onclick="register()">Register</button>
   </div>
-</header>
+</div>
 
 <script src="scripts.js"></script>
 </body>
