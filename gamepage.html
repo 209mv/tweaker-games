@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game - Tweaker Games</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="game-page">
+  <div class="controls">
+    <button id="fullscreen-btn">Fullscreen</button>
+    <button id="sound-btn">Sound On</button>
+  </div>
+  <div class="game-container">
+    <iframe id="game-frame" src="" allowfullscreen></iframe>
+  </div>
+  <div class="sidebar">
+    <h3>Leaderboard</h3>
+    <ul id="leaderboard">
+      <li>User1 - 5000</li>
+      <li>User2 - 4000</li>
+    </ul>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const game = params.get('game');
+  document.getElementById('game-frame').src = game;
+
+  document.getElementById('fullscreen-btn').onclick = () => {
+    document.getElementById('game-frame').requestFullscreen();
+  };
+</script>
+</body>
+</html>
