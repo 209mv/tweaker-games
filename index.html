@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Study Hub</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<body style="margin:0; background:black;">
 
-<h1>Study Hub</h1>
+<canvas id="game"></canvas>
 
-<input type="text" id="search" placeholder="Search games...">
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
 
-<div id="games"></div>
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-<script src="script.js"></script>
+let x = 100;
+
+document.addEventListener("keydown", e => {
+  if (e.key === "a") x -= 10;
+  if (e.key === "d") x += 10;
+});
+
+function loop() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "white";
+  ctx.fillRect(x, 200, 50, 50);
+  requestAnimationFrame(loop);
+}
+
+loop();
+</script>
+
 </body>
 </html>
